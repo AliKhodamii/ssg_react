@@ -2,51 +2,76 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Outlet,
   Link,
   useLocation,
 } from "react-router-dom";
+
 import Home from "./pages/Home";
 import RecentIrrigations from "./pages/RecentIrrigations";
 import AutoIrrigationConfig from "./pages/AutoIrrigationConfig";
 import HumidityBar from "./pages/HumidityBar";
 
+function TopBar() {
+  return (
+    <div className="w-full bg-blue-600 text-white p-4 text-center font-semibold absolute top-0 z-10">
+      👤 User Info (Online)
+    </div>
+  );
+}
+
 function BottomNav() {
   const location = useLocation();
   const active = (path) =>
-    location.pathname === path ? "text-blue-500" : "text-gray-500";
+    location.pathname === path ? "text-blue-600" : "text-gray-500";
 
   return (
-    <nav className="fixed bottom-0 w-full flex justify-around bg-white shadow py-2">
+    <nav className="w-full flex justify-around bg-white shadow border-t py-3 absolute bottom-0 z-10">
       <Link className={active("/")} to="/">
         🏠
       </Link>
-      <Link className={active("/sensors")} to="/sensors">
+      <Link className={active("/recentIrrigations")} to="/recentIrrigations">
         🌡️
       </Link>
-      <Link className={active("/valves")} to="/valves">
+      <Link
+        className={active("/autoIrrigationConfig")}
+        to="/autoIrrigationConfig"
+      >
         💧
       </Link>
-      <Link className={active("/settings")} to="/settings">
+      <Link className={active("/humidityBar")} to="/humidityBar">
         ⚙️
       </Link>
     </nav>
   );
 }
 
+function Layout() {
+  return (
+    <>
+      <TopBar />
+      <main className="pt-16 pb-20 overflow-y-auto h-full">
+        <Outlet />
+      </main>
+      <BottomNav />
+    </>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <div className="pb-16">
-        {" "}
-        {/* Leave space for bottom nav */}
-        <Routes>
+      <Routes>
+        <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/sensors" element={<RecentIrrigations />} />
-          <Route path="/valves" element={<AutoIrrigationConfig />} />
-          <Route path="/settings" element={<HumidityBar />} />
-        </Routes>
-      </div>
-      <BottomNav />
+          <Route path="/recentIrrigations" element={<RecentIrrigations />} />
+          <Route
+            path="/autoIrrigationConfig"
+            element={<AutoIrrigationConfig />}
+          />
+          <Route path="/humidityBar" element={<HumidityBar />} />
+        </Route>
+      </Routes>
     </Router>
   );
 }
