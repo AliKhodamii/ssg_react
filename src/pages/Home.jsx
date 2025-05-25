@@ -1,9 +1,12 @@
 import React from "react";
-
+import Garden from "../components/Garden";
 export default function Home() {
   return (
     <>
-      <div className="p-4 text-center">Home Page</div>
+      <h1 dir="rtl" className="my-5 text-3xl font-bold">
+        باغچه ها
+      </h1>
+      <Garden />
     </>
   );
 }
