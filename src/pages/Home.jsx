@@ -7,6 +7,7 @@ export default function Home() {
         باغچه ها
       </h1>
       <Garden />
+      <Garden />
     </>
   );
 }
