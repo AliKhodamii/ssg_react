@@ -7,26 +7,26 @@ export default function Garden() {
       dir="rtl"
       className="rounded-lg bg-gray-100 grid grid-cols-2 grid-rows-2 gap-2 px-2 py-5"
     >
-      <div className="flex flex-col flex-1 border-4 border-indigo-500 rounded-lg p-2 bg-white">
-        <h2 dir="rtl" className="font-bold">
+      <div className="flex flex-col flex-1  rounded-lg p-2 bg-white">
+        <h2 dir="rtl" className="font-bold text-lg">
           وضعیت رطوبت الان
         </h2>
         <h1 dir="rtl" className="py-8 text-6xl">
           60%
         </h1>
-        <h3 dir="rtl">متوسط</h3>
+        <h3 dir="rtl" className=" text-xl">متوسط</h3>
       </div>
-      <div className="flex flex-col flex-1 border-4 border-indigo-500 rounded-lg p-2 bg-white">
-        <h3 dir="rtl" className="font-bold">
+      <div className="bg-green-100 border-2 border-black flex flex-col flex-1  rounded-lg p-2 bg-white">
+        <h3 dir="rtl" className="font-bold text-lg">
           وضعیت شیر
         </h3>
 
         <img src={openValve} alt="openValve" className="w-[100px] m-auto"></img>
 
-        <p dir="rtl">باز</p>
+        <p dir="rtl" className=" text-xl">باز</p>
       </div>
-      <div className="flex flex-col justify-between flex-1 border-4 border-indigo-500 rounded-lg p-2 bg-white">
-        <h3 dir="rtl" className="font-bold">
+      <div className="flex flex-col justify-between flex-1  rounded-lg p-2 bg-white">
+        <h3 dir="rtl" className="font-bold text-lg">
           آبیاری خودکار بعدی
         </h3>
         <p dir="rtl">سه روز دیگه</p>
@@ -41,8 +41,8 @@ export default function Garden() {
           </tr>
         </table>
       </div>
-      <div className="flex flex-col justify-between flex-1 border-4 border-indigo-500 rounded-lg p-2 bg-white">
-        <h3 dir="rtl" className="font-bold">
+      <div className="flex flex-col justify-between flex-1 rounded-lg p-2 bg-white">
+        <h3 dir="rtl" className="font-bold text-lg">
           کنترل دستی شیر
         </h3>
         <div>
