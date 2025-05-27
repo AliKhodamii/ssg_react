@@ -42,14 +42,16 @@ export default function Garden() {
           سه روز دیگه !
         </p>
         <table className="text-sm ">
-          <tr>
-            <td>سه شنبه</td>
-            <td>1/ خرداد</td>
-          </tr>
-          <tr>
-            <td>ساعت 22:00</td>
-            <td>مدت 20 دقیقه</td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>سه شنبه</td>
+              <td>1/ خرداد</td>
+            </tr>
+            <tr>
+              <td>ساعت 22:00</td>
+              <td>مدت 20 دقیقه</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <div className="flex flex-col justify-between flex-1 rounded-lg p-2 bg-white">
@@ -71,13 +73,13 @@ export default function Garden() {
               type="number"
               min={1}
               max={60}
-              value={"02"}
+              defaultValue="02"
               className="border-2 border-black m-2 w-[40px] h-[30px] text-center"
             />
             <h1 className="inline">:</h1>
             <input
               id="hour"
-              value={"01"}
+              defaultValue="01"
               type="number"
               min={1}
               max={60}
