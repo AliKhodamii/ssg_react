@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import closeVlave from "../pics/closeValve.png";
 
 export default function Garden() {
+  const [often, setOften] = useState(3);
   return (
     <div
       dir="rtl"
@@ -18,7 +19,8 @@ export default function Garden() {
           max={100}
           className="border-2 border-gray-500 h-[100px] w-[100px] text-center m-auto text-6xl"
           style={{ direction: "ltr" }}
-          value={3}
+          value={often}
+          onChange={(e) => setOften(e.target.value)}
         />
         <h3 dir="rtl" className=" text-l text-center">
           روز یک بار
