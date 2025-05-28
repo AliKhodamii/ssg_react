@@ -7,7 +7,7 @@
   src: url(./fonts/Yekan.ttf);
 }
 * {
-  direction: rtl;
+  /* direction: rtl; */
   font-family: yekan;
 }
 @layer base {

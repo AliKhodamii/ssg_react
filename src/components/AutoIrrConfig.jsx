@@ -1,14 +1,24 @@
 import React, { useState } from "react";
+<<<<<<< HEAD
 import closeVlave from "../pics/closeValve.png";
 
 export default function Garden() {
+=======
+
+export default function AutoIrrConfig() {
+>>>>>>> 60d3a8a95c4f1c75f5c6971e9e27cdaa60266d2c
   const [often, setOften] = useState(3);
   return (
     <div
       dir="rtl"
       className="rounded-lg bg-gray-300 grid grid-cols-2 grid-rows-[20px_1fr_1fr] gap-3 px-2 py-5 m-2 shadow-lg"
     >
-      <h3 className="col-span-2 text-lg">شیر آب 1</h3>
+      <h3 className=" text-lg">شیر آب 1</h3>
+      <div dir="ltr">
+        <button className="border-2 border-red-500 px-3 rounded-lg hover:bg-red-300 hover:text-white">
+          خاموش کردن
+        </button>
+      </div>
       <div className="flex flex-col flex-1  rounded-lg p-2 bg-white">
         <h2 dir="rtl" className="font-bold text-lg">
           تکرار آبیاری
